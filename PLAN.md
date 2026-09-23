@@ -1,8 +1,15 @@
-## HTTP Status Checker: Implementation plan
+# HTTP Status Checker: Implementation plan
 
 This tool will leverage the `requests` and `click` libraries to build a simple CLI program that can be used to check the health of multiple URLs.
 
-### Core Functionality Requirements
+## Table of Contents <!-- omit in toc -->
+
+- [1. Core Functionality Requirements](#1-core-functionality-requirements)
+- [2. CLI Interface Requirements](#2-cli-interface-requirements)
+- [3. Logging Requirements](#3-logging-requirements)
+- [4. Installation \& Distribution Requirements](#4-installation--distribution-requirements)
+
+## 1. Core Functionality Requirements
 
 1. URL Status Checking
     - Check the HTTP status of one or more URLs
@@ -22,30 +29,30 @@ This tool will leverage the `requests` and `click` libraries to build a simple C
     - Return results as a dictionary mapping URLs to their status
     - Handle empty URL lists gracefully
 
-### CLI Interface Requirements
+## 2. CLI Interface Requirements
 
-5. Command Line Interface
+1. Command Line Interface
     - Accept multiple URLs as command line arguments
-    - Provide `--timeout` option to configure request timeout
+    - Provide `--timeout/-t` option to configure request timeout
     - Provide `--verbose/-v` flag for debug logging
     - Display usage information when no URLs provided
-6. Output Formatting
+2. Output Formatting
     - Display results in a formatted table-like structure
     - Use color coding (green for success, red for errors)
     - Show URL and corresponding status for each check
 
-### Logging Requirements
+## 3. Logging Requirements
 
-7. Comprehensive Logging
+1. Comprehensive Logging
     - Log start and completion of URL checking operations
     - Log individual URL check attempts at debug level
     - Log warnings for timeouts and connection errors
     - Log errors for unexpected exceptions with full stack traces
     - Support configurable log levels (INFO by default, DEBUG with verbose flag)
 
-### Installation & Distribution Requirements
+## 4. Installation & Distribution Requirements
 
-8. Package Distribution
+1. Package Distribution
     - Installable as a Python package
     - Provide console script entry point (`check-urls` command)
     - Include proper dependency management (requests, click)
