@@ -5,7 +5,8 @@ import requests
 
 logger = logging.getLogger(__name__)
 
-API_TOKEN = "ghp_ThisLooksLikeAPersonalGitHubAccessToken"
+# Uncomment line below to showcase workflow fail -> security check error from bandit
+# API_TOKEN = "ghp_ThisLooksLikeAPersonalGitHubAccessToken"
 
 
 def check_urls(urls: Collection[str], timeout: int = 5) -> dict[str, str]:
