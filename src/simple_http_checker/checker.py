@@ -5,6 +5,8 @@ import requests
 
 logger = logging.getLogger(__name__)
 
+API_TOKEN = "ghp_ThisLooksLikeAPersonalGitHubAccessToken"
+
 
 def check_urls(urls: Collection[str], timeout: int = 5) -> dict[str, str]:
     """
