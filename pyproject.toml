@@ -38,6 +38,7 @@ warn_unused_configs = true
 
 [tool.bandit]
 exclude_dirs = [".venv", "__pycache__", "build", "dirs"]
+skips = ["B101"]
 
 [tool.pytest.ini_options]
 addopts = "-rA -s -v"
