@@ -22,7 +22,7 @@ def test_check_urls_success(mocker: MockerFixture) -> None:
     assert results[urls[0]] == "200 OK"
 
 
-def test_check_url_client_error(mocker: MockerFixture) -> None:
+def test_check_urls_client_error(mocker: MockerFixture) -> None:
     mock_requests_get = mocker.patch("simple_http_checker.checker.requests.get")
 
     mock_response = mocker.MagicMock(spec=requests.Response)
@@ -48,7 +48,7 @@ def test_check_url_client_error(mocker: MockerFixture) -> None:
     ],
     # ids=["Timeout", "ConnectionError", "RequestException"],
 )
-def test_check_url_requests_exceptions(
+def test_check_urls_requests_exceptions(
     mocker: MockerFixture,
     error_exception: type[requests.exceptions.RequestException],
     expected_status: str,
