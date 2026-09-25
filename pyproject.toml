@@ -8,10 +8,7 @@ version = "0.1.0"
 description = "A simple CLI tool to check the status of URLs."
 readme = "README.md"
 requires-python = ">=3.9"
-dependencies = [
-    "requests>=2.34,<3.0",
-    "click>=8.0,<9.0"
-]
+dependencies = ["requests>=2.34,<3.0", "click>=8.0,<9.0"]
 
 [project.optional-dependencies]
 dev = [
@@ -20,7 +17,7 @@ dev = [
     "ruff",
     "black",
     "mypy",
-    "bandit"
+    "bandit",
     # types-requests # Not needed for mypy type hints since requests v2.34.0
 ]
 
