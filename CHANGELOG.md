@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.3 (2026-09-26)
+
+### Bug Fixes
+
+- **python-cicd**: Try fixing publish workflow by matching package name
+  ([`411c0e7`](https://github.com/mvpris/python-devops-cicd-project/commit/411c0e75b0388de3520fe8d5d518fc18626aa82d))
+
+
 ## v1.1.2 (2026-09-26)
 
 ### Bug Fixes
