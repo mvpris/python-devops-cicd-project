@@ -24,8 +24,9 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-artifact@v7
         with:
-          name: simple-http-checker-d-superteach-${{ github.sha }}
+          name: simple-http-checker-${{ github.sha }}
           path: dist/
+
   publish-testpypi:
     runs-on: ubuntu-latest
     needs: build
@@ -37,7 +38,7 @@ jobs:
       - name: Download build artifacts
         uses: actions/download-artifact@v7
         with:
-          name: simple-http-checker-d-superteach-${{ github.sha }}
+          name: simple-http-checker-${{ github.sha }}
           path: dist/
       - name: Publish to TestPyPI
         uses: pypa/gh-action-pypi-publish@release/v1
