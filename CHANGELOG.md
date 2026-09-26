@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.2 (2026-09-26)
+
+### Bug Fixes
+
+- **python-cicd**: Fix publish workflow by adding trailing slash to url
+  ([`4f2b8c6`](https://github.com/mvpris/python-devops-cicd-project/commit/4f2b8c698158bb464ba7fb59a5003e5f95557bbe))
+
+
 ## v1.1.1 (2026-09-26)
 
 ### Bug Fixes
