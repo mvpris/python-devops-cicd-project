@@ -11,15 +11,7 @@ requires-python = ">=3.10"
 dependencies = ["requests>=2.34,<3.0", "click>=8.0,<9.0"]
 
 [project.optional-dependencies]
-dev = [
-    "pytest",
-    "pytest-mock",
-    "ruff",
-    "black",
-    "mypy",
-    "bandit",
-    # types-requests # Not needed for mypy type hints since requests v2.34.0
-]
+dev = ["pytest", "pytest-mock", "ruff", "black", "mypy", "bandit"]
 
 [project.scripts]
 check-urls = "simple_http_checker.cli:main"
@@ -33,8 +25,6 @@ line-length = 88
 [tool.mypy]
 warn_return_any = true
 warn_unused_configs = true
-# ignore_missing_imports = true # Not needed because 
-# since 2.34.0, requests ships its type hints inside the package itself
 
 [tool.bandit]
 exclude_dirs = [".venv", "__pycache__", "build", "dirs"]
@@ -42,3 +32,35 @@ skips = ["B101"]
 
 [tool.pytest.ini_options]
 addopts = "-rA -s -v"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+build_command = "pip install build && python -m build"
+dist_path = "dist/"
+upload_to_pypi = false
+upload_to_release = true
+hvcs = "github"
+commit_message = "chore(release): {version} [skip ci]"
+
+[tool.semantic_release.branches.main]
+match = "main"
+prerelease = false
+
+[tool.semantic_release.changelog.default_templates]
+changelog_file = "CHANGELOG.md"
+
+[tool.semantic_release.commit_parser_options]
+allowed = [
+    "build",
+    "chore",
+    "ci",
+    "docs",
+    "feat",
+    "fix",
+    "perf",
+    "refactor",
+    "style",
+    "test",
+]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
