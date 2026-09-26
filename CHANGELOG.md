@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.4 (2026-09-26)
+
+### Bug Fixes
+
+- **python-cicd**: Try fixing publish to TestPyPI by renaming project
+  ([`1f34229`](https://github.com/mvpris/python-devops-cicd-project/commit/1f34229ba319984d2727103a348f887269348c0e))
+
+
 ## v1.1.3 (2026-09-26)
 
 ### Bug Fixes
