@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.2.0 (2026-09-27)
+
+### Features
+
+- **python-cicd**: Add publish to PyPI job to publish workflow
+  ([`4470321`](https://github.com/mvpris/python-devops-cicd-project/commit/4470321f3024a5d2b5fbfd751a8f101b1ef6cec8))
+
+
 ## v1.1.5 (2026-09-26)
 
 ### Bug Fixes
