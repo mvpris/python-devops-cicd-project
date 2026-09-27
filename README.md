@@ -2,7 +2,9 @@
 
 This repo contains the code for the CI/CD section of my Python for DevOps course.
 
-The developed package `simple-http-checker-d-superteach` is a simple CLI tool to check the status of URLs. A CI/CD pipeline is showcased by building, testing and deploying the package by using an automated GitHub Actions workflow.
+The developed package `simple-http-checker-d-superteach` is a simple CLI tool to check the status of URLs.
+
+A CI/CD pipeline is showcased by building, testing and deploying the package with an automated GitHub Actions workflow.
 
 ## What I implement in this project
 
