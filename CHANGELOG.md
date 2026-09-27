@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v1.2.3 (2026-09-27)
+
+### Bug Fixes
+
+- **python-cicd**: Force a patch release bump to publish updates to PyPI
+  ([`4eae4c6`](https://github.com/mvpris/python-devops-cicd-project/commit/4eae4c684e46c6d47dce0e9a3cb0e57bb48a2865))
+
+### Continuous Integration
+
+- **python-cicd**: Rename job publish-pypi in workflow and update README
+  ([`1ca08c9`](https://github.com/mvpris/python-devops-cicd-project/commit/1ca08c90cc378d056a807ff0fab075be03ce2c88))
+
+
 ## v1.2.2 (2026-09-27)
 
 ### Bug Fixes
