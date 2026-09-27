@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.2.2 (2026-09-27)
+
+### Bug Fixes
+
+- **python-cicd**: Update README.md with all project tasks completed
+  ([`5be5d17`](https://github.com/mvpris/python-devops-cicd-project/commit/5be5d170a497e69338d13133489e39acf7aaf213))
+
+
 ## v1.2.1 (2026-09-27)
 
 ### Performance Improvements
