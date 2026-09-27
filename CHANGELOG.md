@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.2.1 (2026-09-27)
+
+### Performance Improvements
+
+- **python-cicd**: Dedup build logic and download artifacts from release
+  ([`26a7ac1`](https://github.com/mvpris/python-devops-cicd-project/commit/26a7ac1a3d4481bbddc9a290fed25ee5fd3de17b))
+
+
 ## v1.2.0 (2026-09-27)
 
 ### Features
