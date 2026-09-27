@@ -10,4 +10,4 @@ This repo contains the code for the CI/CD section of my Python for DevOps course
 - [x] Add type (`mypy`) and security (`bandit`) checks
 - [x] Add test automation
 - [x] Build the project
-- [ ] Publish the project to both `TestPyPI` and `PyPI` when a new tag is pushed
+- [x] Publish the project to both `TestPyPI` and `PyPI` when a new tag is pushed
