@@ -75,10 +75,6 @@ jobs:
       - lint-format-type-security-checks
       - tests
 
-    permissions:
-      id-token: write
-      contents: write
-
     steps:
       - name: Check out repo
         uses: actions/checkout@v7
