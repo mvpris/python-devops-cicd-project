@@ -18,20 +18,13 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - name: Download wheel artifact
-        uses: robinraju/release-downloader@v1.13
-        with:
-          repository: ${{ github.repository }}
-          tag: ${{ github.event.release.tag_name || github.event.inputs.tag }}
-          fileName: "*.whl"
-          out-file-path: dist/
-      - name: Download tarball artifact
-        uses: robinraju/release-downloader@v1.13
-        with:
-          repository: ${{ github.repository }}
-          tag: ${{ github.event.release.tag_name || github.event.inputs.tag }}
-          fileName: "*.tar.gz"
-          out-file-path: dist/
+      - name: Download release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.event.release.tag_name ||  github.event.inputs.tag }}
+        run: |
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --dir dist --pattern '*.whl' --pattern '*.tar.gz'
+          ls -l dist/
       - name: Publish to TestPyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
@@ -47,20 +40,13 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - name: Download wheel artifact
-        uses: robinraju/release-downloader@v1.13
-        with:
-          repository: ${{ github.repository }}
-          tag: ${{ github.event.release.tag_name || github.event.inputs.tag }}
-          fileName: "*.whl"
-          out-file-path: dist/
-      - name: Download tarball artifact
-        uses: robinraju/release-downloader@v1.13
-        with:
-          repository: ${{ github.repository }}
-          tag: ${{ github.event.release.tag_name || github.event.inputs.tag }}
-          fileName: "*.tar.gz"
-          out-file-path: dist/
+      - name: Download release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.event.release.tag_name || github.event.inputs.tag }}
+        run: |
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --dir dist --pattern '*.whl' --pattern '*.tar.gz'
+          ls -l dist/
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
