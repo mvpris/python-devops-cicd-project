@@ -5,12 +5,6 @@ import click
 
 from .checker import check_urls
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="[%(asctime)s] %(levelname)-8s %(name)s: %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
-
 logger = logging.getLogger(__name__)
 
 
@@ -19,8 +13,12 @@ logger = logging.getLogger(__name__)
 @click.option("--timeout", "-t", default=5, help="Timeout in seconds for each request.")
 @click.option("--verbose", "-v", is_flag=True, help="Enable debug logging.")
 def main(urls: Collection[str], timeout: int, verbose: bool):
+    logging.basicConfig(
+        level=logging.DEBUG if verbose else logging.INFO,
+        format="[%(asctime)s] %(levelname)-8s %(name)s: %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
     if verbose:
-        logging.getLogger().setLevel(logging.DEBUG)
         logger.debug("Verbose logging enabled.")
 
     logger.debug(f"Received urls: {urls}")
@@ -43,8 +41,3 @@ def main(urls: Collection[str], timeout: int, verbose: bool):
         else:
             fg_color = "red"
         click.secho(f"{url:<40} -> {status}", fg=fg_color)
-
-
-# Example usage (in-terminal command)
-# pip install -e .
-# check-urls -vt10 https://www.google.com https://www.github.com https://www.aajdfhhjsdbgsjbndfjok.com http://httpbin.org/status/404
