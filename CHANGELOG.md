@@ -2,6 +2,43 @@
 
 <!-- version list -->
 
+## v1.2.4 (2026-09-29)
+
+### Bug Fixes
+
+- **python-cicd**: Configure logging in main() instead of at import time
+  ([`951cf9a`](https://github.com/mvpris/python-devops-cicd-project/commit/951cf9abbf082753e9f1aefb2d0df9ed1b6bc4d1))
+
+### Build System
+
+- **python-cicd**: Declare MIT license in project metadata
+  ([`c21fdda`](https://github.com/mvpris/python-devops-cicd-project/commit/c21fdda868642eaa8f283beeb11765c4e8e72823))
+
+### Chores
+
+- **python-cicd**: Update .gitignore to ignore practice dir
+  ([`bd01479`](https://github.com/mvpris/python-devops-cicd-project/commit/bd014797fc6942b76e01e315dcc16a2787b9d9ea))
+
+### Continuous Integration
+
+- **python-cicd**: Remove unused id-token permission from release job
+  ([`a27f73c`](https://github.com/mvpris/python-devops-cicd-project/commit/a27f73cb7dc5121e944e9878381e460146ed5396))
+
+- **python-cicd**: Replace 3rd-party release-downloader action with gh CLI
+  ([`741f25c`](https://github.com/mvpris/python-devops-cicd-project/commit/741f25c668fb1a682787fc5f0f952d6265589822))
+
+- **python-cicd**: Skip existing files in PyPI publish job
+  ([`dd93d2c`](https://github.com/mvpris/python-devops-cicd-project/commit/dd93d2c826584b5f1edbc8c27c3ea5b4d2a76248))
+
+### Documentation
+
+- **python-cicd**: Rewrite README with install, usage and pipeline docs
+  ([`749e65c`](https://github.com/mvpris/python-devops-cicd-project/commit/749e65c55310a0bc0d94d9d2edc7d467650366f1))
+
+- **python-cicd**: Update PLAN.md to show Python 3.10+ compatibility
+  ([`8279839`](https://github.com/mvpris/python-devops-cicd-project/commit/8279839ffd3c41557b0a248d8ad1ba3dbf30936e))
+
+
 ## v1.2.3 (2026-09-27)
 
 ### Bug Fixes
