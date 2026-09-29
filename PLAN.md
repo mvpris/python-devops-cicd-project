@@ -56,4 +56,4 @@ This tool will leverage the `requests` and `click` libraries to build a simple C
     - Installable as a Python package
     - Provide console script entry point (`check-urls` command)
     - Include proper dependency management (requests, click)
-    - Support Python 3.9+ compatibility
+    - Support Python 3.10+ compatibility
