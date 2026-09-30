@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.2.5 (2026-09-30)
+
+### Bug Fixes
+
+- **python-cicd**: Fix typo for bandit tool config in project metadata
+  ([`198fe04`](https://github.com/mvpris/python-devops-cicd-project/commit/198fe04ca478c1ea3020d30d501bfa0cfb3be5c3))
+
+
 ## v1.2.4 (2026-09-29)
 
 ### Bug Fixes
